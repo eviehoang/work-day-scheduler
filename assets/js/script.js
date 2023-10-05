@@ -4,6 +4,8 @@ var day = $('#currentDay');
 var saveBtn = document.getElementById("saveBtn");
 var currentTime = dayjs().hour();
 
+var clearBtn = document.getElementById("clearBtn")
+
 // Display time.
 setInterval(function showDate() {
   var today = dayjs()
@@ -43,7 +45,7 @@ $('.saveBtn').on('click', function () {
 
   // Add information into Modal
   var modal = document.getElementById('modalprint');
-  modal.textContent ="You've added: " + task +" !" ;
+  modal.textContent = "You've added: " + task + " !";
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
@@ -56,5 +58,13 @@ $("#time14 .description").val(localStorage.getItem("time14"));
 $("#time15 .description").val(localStorage.getItem("time15"));
 $("#time16 .description").val(localStorage.getItem("time16"));
 $("#time17 .description").val(localStorage.getItem("time17"));
+
+
+// Clear List
+clearBtn.onclick = function () {
+  localStorage.clear();
+  // refresh page to show clearing
+  history.go();
+};
 
 timeTracker();

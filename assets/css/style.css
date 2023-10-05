@@ -12,10 +12,6 @@ textarea {
   padding: 10px;
 }
 
-#currentDay {
-  color: #FFFFFF;
-}
-
 .description {
   background-color: #e7e7e7;
 }
@@ -26,12 +22,12 @@ textarea {
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #e29e9b;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #6ea66e;
   color: white;
 }
 
