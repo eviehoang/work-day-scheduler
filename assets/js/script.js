@@ -12,7 +12,7 @@ setInterval(function showDate() {
 
 // Track hr of day.
 
-$(function timeTracker() {
+function timeTracker() {
 
   $('.description').each(function () {
     var schdTime = $(this).attr("id").split("time")[1];
@@ -30,22 +30,21 @@ $(function timeTracker() {
     }
   })
 
-});
+};
 
 // Event Listner
-$('saveBtn').on('click', function(){
+$('.saveBtn').on('click', function () {
 
   // Grab inputed task.
   var task = $(this).siblings(".description").val();
-  var schdTime = $(this).attr("id").split("time")
+  var hour = $(this).parent().attr("id");
 
-  localStorage.setItem (schdTime, task);
+  localStorage.setItem(hour, task);
 
   // Add information into Modal
+  var timeSlot = $('#timeslot').val()
   var modal = document.getElementById('modalprint');
-
-  modal.textContent = schdTime + task;
-
+  modal.textContent ="You've added: " + task + "at " + timeSlot+ "!" ;
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
@@ -58,3 +57,5 @@ $("#time14 .description").val(localStorage.getItem("time14"));
 $("#time15 .description").val(localStorage.getItem("time15"));
 $("#time16 .description").val(localStorage.getItem("time16"));
 $("#time17 .description").val(localStorage.getItem("time17"));
+
+timeTracker();
