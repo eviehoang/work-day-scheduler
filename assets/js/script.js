@@ -10,13 +10,11 @@ setInterval(function showDate() {
   day.text(today);
 })
 
-showDate();
-
 // Track hr of day.
 
 $(function timeTracker() {
 
-  $('.timetrack').each(function () {
+  $('.description').each(function () {
     var schdTime = $(this).attr("id").split("time")[1];
 
     if (schdTime < currentTime) {
@@ -38,5 +36,27 @@ $(function timeTracker() {
 $('saveBtn').on('click', function(){
 
   // Grab inputed task.
-  var task = $(this).siblings("").val();
+  var task = $(this).siblings(".description").val();
+  var schdTime = $(this).attr("id").split("time")
+
+  localStorage.setItem (schdTime, task);
+})
+
+$("#time08 .description").val(localStorage.getItem("time08"));
+$("#time09 .description").val(localStorage.getItem("time09"));
+$("#time10 .description").val(localStorage.getItem("time10"));
+$("#time11 .description").val(localStorage.getItem("time11"));
+$("#time12 .description").val(localStorage.getItem("time12"));
+$("#time13 .description").val(localStorage.getItem("time13"));
+$("#time14 .description").val(localStorage.getItem("time14"));
+$("#time15 .description").val(localStorage.getItem("time15"));
+$("#time16 .description").val(localStorage.getItem("time16"));
+$("#time17 .description").val(localStorage.getItem("time17"));
+
+// Modal
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
 })

@@ -17,7 +17,7 @@ textarea {
 }
 
 .description {
-  white-space: pre-wrap;
+  background-color: #e7e7e7;
 }
 
 .past {
