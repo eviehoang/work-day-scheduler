@@ -1,2 +1,1 @@
-# work-day-scheduler
-Challenge 5: Creating a workday calendar. 
+# Work Day Scheduler Starter Code
