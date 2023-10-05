@@ -12,23 +12,27 @@ setInterval(function showDate() {
   day.text(today);
 })
 
-// Track hr of day.
+// Track hr of day. And if the time is past,
+//present or future, apply a different color.
 
 function timeTracker() {
 
   $('.description').each(function () {
-    var schdTime = $(this).attr("id").split("time")[1];
+    var schdTime = $(this).parent().attr("id").split("time")[1];
 
     if (schdTime < currentTime) {
       $(this).addClass("past");
+      $(this).children(".description").addClass("past");
     }
 
     else if (schdTime == currentTime) {
       $(this).addClass("present");
+      $(this).children(".description").addClass("present");
     }
 
     else {
       $(this).addClass("future");
+      $(this).children(".description").addClass("future");
     }
   })
 
@@ -45,7 +49,7 @@ $('.saveBtn').on('click', function () {
 
   // Add information into Modal
   var modal = document.getElementById('modalprint');
-  modal.textContent = "You've added: " + task + " !";
+  modal.textContent = "You've added: " + task + "!";
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
