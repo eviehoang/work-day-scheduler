@@ -43,13 +43,18 @@ textarea {
 .saveBtn:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-  background-color: rgb(199, 237, 237);
+  background-color: rgb(136, 220, 220);
 }
 
 .times {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   padding: 1%;
+}
+
+p {
+  font-size: x-large;
+  padding-top: 21%;
 }
 
 .centered{
