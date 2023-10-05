@@ -40,6 +40,12 @@ $('saveBtn').on('click', function(){
   var schdTime = $(this).attr("id").split("time")
 
   localStorage.setItem (schdTime, task);
+
+  // Add information into Modal
+  var modal = document.getElementById('modalprint');
+
+  modal.textContent = schdTime + task;
+
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
@@ -52,11 +58,3 @@ $("#time14 .description").val(localStorage.getItem("time14"));
 $("#time15 .description").val(localStorage.getItem("time15"));
 $("#time16 .description").val(localStorage.getItem("time16"));
 $("#time17 .description").val(localStorage.getItem("time17"));
-
-// Modal
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
