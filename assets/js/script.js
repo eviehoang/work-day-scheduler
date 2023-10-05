@@ -42,9 +42,8 @@ $('.saveBtn').on('click', function () {
   localStorage.setItem(hour, task);
 
   // Add information into Modal
-  var timeSlot = $('#timeslot').val()
   var modal = document.getElementById('modalprint');
-  modal.textContent ="You've added: " + task + "at " + timeSlot+ "!" ;
+  modal.textContent ="You've added: " + task +" !" ;
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
