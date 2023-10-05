@@ -49,7 +49,7 @@ $('.saveBtn').on('click', function () {
 
   // Add information into Modal
   var modal = document.getElementById('modalprint');
-  modal.textContent = "You've added: " + task + "!";
+  modal.textContent = "You've added: " + task ;
 })
 
 $("#time08 .description").val(localStorage.getItem("time08"));
