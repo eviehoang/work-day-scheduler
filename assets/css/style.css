@@ -12,6 +12,10 @@ textarea {
   padding: 10px;
 }
 
+#currentDay {
+  color: #FFFFFF;
+}
+
 .description {
   white-space: pre-wrap;
 }
